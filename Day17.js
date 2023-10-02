@@ -1,0 +1,79 @@
+// map()
+
+let birthYear = [1990,1991,1992,1993]
+//[33,32,31,30]
+let q1 = birthYear.map(function(el,index,arr){
+    //console.log(el,index,arr)
+    return 2023 - el
+})
+console.log(q1)
+
+let numbers = [11,22,33,44,55]
+//[13,24,35,46,57]
+let q2 = numbers.map(function(el,index,arr){
+    return el + 2
+})
+console.log(q2)
+//===================================================
+
+//filter()
+let marks = [33,44,55,66,33,44,55]
+//[55,66,55]
+let q3 = marks.filter(function(el,index,arr){
+    return el > 50
+})
+console.log(q3)
+//=======================================================
+
+//reduce()
+let transaction = [11,22,33]  //66
+let q4 = transaction.reduce(function(acc,el,index,arr){
+    return acc + el  //66
+},0)
+console.log(q4)
+
+//=====================================================
+
+//forEach()  //will not return anything
+let cities = ["pune","mumbai","banglore"]
+cities.forEach(function(el,index,arr){
+    console.log("welcome " + el)
+})
+//===================================================
+
+//find()
+//           0  1  2  3  4
+let names = [44,55,77,88,44]
+//[55,77,88]
+let q6 = names.filter(function(el,index,arr){
+    return el > 50
+})
+console.log(q6)
+
+let q7= names.find(function(el,inndex,arr){
+    return el > 50
+})
+console.log(q7)
+//=====================================================
+
+//findIndex
+let q8 = names.findIndex(function(el,index,arr){
+    return el > 50
+})
+console.log(q8)
+//==================================================
+
+//every
+let nums = [55,60,77,33,45,66,77]
+let q9 =nums.every(function(el,index,arr){
+    return el > 30
+})
+console.log(q9)
+//======================================================
+
+//some
+let q10 = nums.some(function(el,index,arr){
+    return el < 10
+})
+console.log(q10)
+
